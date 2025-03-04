@@ -19,16 +19,16 @@ Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast,
 
 ## 🎮 Games Available
 
-| Game Name           | Description                              |
+| Game Name          | Description                              |
 |--------------------|----------------------------------|
-| Subway Surfers     | Run, dodge, and collect coins. |
-| Temple Run - Holi  | Run, escape, and dodge all obstacles! |
-| Stack Bounce       | Smash stacks with bouncing ball fun! |
-| Pac Man       | Eat dots, avoid ghosts, classic maze! |
-| Happy Wheels       | Crazy physics racing with hilarious crashes! |
-| Geometry Dash      | Jump, dodge, and survive the beat! |
-| Tunnel Rush        | Dodge obstacles in colorful fast tunnel! |
-| Monster Truck      | Race monster trucks to the finish! |
+| Subway Surfers | Run, dodge, and collect coins. |
+| Temple Run - Holi | Run, escape, and dodge all obstacles! |
+| Stack Bounce | Smash stacks with bouncing ball fun! |
+| Pac Man | Eat dots, avoid ghosts, classic maze! |
+| Happy Wheels | Crazy physics racing with hilarious crashes! |
+| Geometry Dash | Jump, dodge, and survive the beat! |
+| Tunnel Rush | Dodge obstacles in colorful fast tunnel! |
+| Monster Truck | Race monster trucks to the finish! |
 
 ---
 
@@ -65,6 +65,7 @@ const games = {
     "subway-surfers": "https://freeonlinegames.github.io/subway-surfers-tokyo/",
     "geometry-dash": "https://freeonlinegames.github.io/geometry-dash.html",
     "tunnel-rush": "https://ubg100.github.io/games/tunnelrush/index.html",
+    //more in same format
 };
 
 const tg = window.Telegram.WebApp;
@@ -73,6 +74,7 @@ tg.expand();
 const params = new URLSearchParams(window.location.search);
 const game = params.get('game');
 
+//embed game in iframe
 if (games[game]) {
     document.getElementById('gameFrame').src = games[game];
 } else {
@@ -83,23 +85,29 @@ if (games[game]) {
 **Orientation Handling to Hide Navbar in Landscape**
 
 ```javascript
+//telegram event handler for orientation
+
 Telegram.WebApp.onEvent('deviceOrientationChanged', () => {
-    const beta = Telegram.WebApp.beta;
-    const gamma = Telegram.WebApp.gamma;
+    const beta = Telegram.WebApp.DeviceOrientation.beta;
+    const gamma = Telegram.WebApp.DeviceOrientation.gamma;
 
     if (Math.abs(beta) > Math.abs(gamma)) {
         document.getElementById('navbar').style.display = "flex";
+        //more
     } else {
         document.getElementById('navbar').style.display = "none";
+        //more
     }
 });
 
-Telegram.WebApp.deviceOrientation.start();
+Telegram.WebApp.DeviceOrientation.start();
 ```
 
 **Fullscreen Toggle**
 
 ```javascript
+//telegram bulit-in fullscreen toggle
+
 let isFullScreen = false;
 
 function toggleFullScreen() {
@@ -116,6 +124,8 @@ function toggleFullScreen() {
 **Request Form**
 
 ```javascript
+//form submmit with error handling and success alert
+
 const payload = {
     user_id: tg.initDataUnsafe.user.id,
     user_name: tg.initDataUnsafe.user.first_name,
