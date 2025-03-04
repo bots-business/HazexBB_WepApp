@@ -210,9 +210,9 @@ Have questions or want to collaborate? Reach out via Telegram:
 
 ## ⭐ Credits
 
-Developed By: **Hazex**
-Contest Hosted By: [Bots.Business](https://t.me/botsbus)
-Bot Link: [@HazexBB_Bot](https://t.me/Hazexbb_bot)
+- Developed By: **Hazex**
+- Contest Hosted By: [Bots.Business](https://t.me/botsbus)
+- Bot Link: [@HazexBB_Bot](https://t.me/Hazexbb_bot)
 
 ---
 
