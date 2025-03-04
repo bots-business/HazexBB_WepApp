@@ -206,16 +206,17 @@ Have questions or want to collaborate? Reach out via Telegram:
 
 ## ⭐ Credits
 
-Developed by: **Hazex**  
-Bot Link: [@HazexBB_Bot](https://t.me/HazexBB_Bot)
+Developed By: **Hazex**
+Contest Hosted By: [Bots.Business](https://t.me/botsbus)
+Bot Link: [@HazexBB_Bot](https://t.me/Hazexbb_bot)
 
 ---
 
 ## 🏁 Final Note
 
-This project isn’t just a game launcher — it’s designed to show the **full potential of Telegram WebApps**, including:
+This project isn’t just a game launcher — it’s designed to show the **full potential of Telegram WebApps and Bots.Business Platform**, including:
 
-- Dynamic content loading
 - Fullscreen gaming experience
 - Real-time device interaction
-- Seamless integration with Telegram’s evolving platform
+- User's Game Request
+- Seamless integration with Bots.Business’s evolving platform
