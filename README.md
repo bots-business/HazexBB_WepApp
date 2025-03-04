@@ -1,84 +1,168 @@
-# HazexBB_Bot - chat bot
-It is repository for chat bot: [@HazexBB_Bot](https://t.me/HazexBB_Bot)
 
-## What it is?
-This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
+# Hazex Games 🎮
 
-[Bots.Business](https://bots.business) - it is probably the first CBPaaS - Chat Bot Platform as a Service.
+Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast, fun, and addictive games directly inside Telegram**. From arcade classics to modern skill challenges, Hazex Games offers a smooth, mobile-friendly experience.
 
-A CBPaaS is a cloud-based platform that enables developers to create chatbots without needing to build backend infrastructure.
+---
 
-## Create your own bot for Telegram from this Git repo
+## ✨ Key Features
 
-How to create bot?
-1. Create bot with [@BotFather](https://telegram.me/BotFather) and take Secret Token
-2. Create bot in App and add Secret Token
-3. Add Public Key from App as [Deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) with read access (and write access for bot exporting if you need it)
-4. Do import for this git repo
+- 🕹️ **8+ Games Embedded Directly Inside Telegram**
+- 📲 **Full WebApp Integration**
+- 📐 **Auto Fullscreen with Orientation Support**
+- ⚡ **Seamless Play with No Installs**
+- 🎨 **Responsive Design for Mobile & Desktop**
 
-Now you can talk with yours new Telegram Bot
+---
 
-See [more](https://help.bots.business/getting-started)
+## 🎮 Games Available
 
-## Commands - in commands folder
-File name - it is command name (Bot it can be rewritten in command description)
+| Game Name           | Description                              |
+|--------------------|----------------------------------|
+| Subway Surfers     | Run, dodge, and collect coins. |
+| Happy Wheels       | Hilarious physics-based obstacle game. |
+| Geometry Dash      | Jump and survive the beat. |
+| Monster Truck      | Race monster trucks to the finish. |
+| Temple Run         | Escape the temple, avoid obstacles. |
+| Stupid Zombie      | Shoot and solve physics puzzles. |
+| Stack Bounce       | Smash through rotating stacks. |
+| Tunnel Rush        | Dodge obstacles in high-speed tunnel. |
 
-Command can have: `name`, `help`, `aliases` (second names), `answer`, `keyboard`, `scnarios` (for simple logic) and other options.
+---
 
-### Command description
-It is file header:
+## 🔗 How It Works
 
-    /*CMD
-      command: /test
-      help: this is help for ccommand
-      need_reply: [ true or false here ]
-      auto_retry_time: [ time in sec ]
-      answer: it is example answer for /test command
-      keyboard: button1, button2
-      aliases: /test2, /test3
-    CMD*/
+1. Users open the bot and click the **Open** button.
+2. They see a clean interface with **game cards, search bar, and a responsive layout**.
+3. Clicking any game opens it directly inside Telegram.
+4. **Fullscreen support for immersive gameplay.**
+5. Orientation detection hides the navbar in landscape mode for better screen space.
+6. Users can exit fullscreen or return to the main menu at any time.
 
-See [more](https://help.bots.business/commands)
+---
 
-### Command body
-It is command code in JavaScript.
-Use Bot Java Script for logic in command.
+## 🛠️ Technologies Used
 
-For example:
-> Bot.sendMessage(2+2);
+- **Bots.Business WebApp**
+- **BJS, HTML, CSS, JS**
+- **Telegram Mini App Events (orientation, fullscreen, etc.)**
+- **Dynamic Game Loader using URL Parameters**
+- **Mobile Responsive Layout**
 
-See [more](https://help.bots.business/scenarios-and-bjs)
+---
+
+## 📄 Example Code
+
+**Dynamic Game Loading (game.html)**
+
+```javascript
+const games = {
+    "subway-surfers": "https://freeonlinegames.github.io/subway-surfers-tokyo/",
+    "geometry-dash": "https://freeonlinegames.github.io/geometry-dash.html",
+    "tunnel-rush": "https://ubg100.github.io/games/tunnelrush/index.html",
+};
+
+const tg = window.Telegram.WebApp;
+tg.expand();
+
+const params = new URLSearchParams(window.location.search);
+const game = params.get('game');
+
+if (games[game]) {
+    document.getElementById('gameFrame').src = games[game];
+} else {
+    document.body.innerHTML = '<h2>Game not found!</h2>';
+}
+```
+
+**Orientation Handling to Hide Navbar in Landscape**
+
+```javascript
+Telegram.WebApp.onEvent('deviceOrientationChanged', () => {
+    const beta = Telegram.WebApp.beta;
+    const gamma = Telegram.WebApp.gamma;
+
+    if (Math.abs(beta) > Math.abs(gamma)) {
+        document.getElementById('navbar').style.display = "flex";
+    } else {
+        document.getElementById('navbar').style.display = "none";
+    }
+});
+
+Telegram.WebApp.deviceOrientation.start();
+```
+
+**Fullscreen Toggle**
+
+```javascript
+let isFullScreen = false;
+
+function toggleFullScreen() {
+    if (isFullScreen) {
+        Telegram.WebApp.exitFullscreen();
+        isFullScreen = false;
+    } else {
+        Telegram.WebApp.requestFullscreen();
+        isFullScreen = true;
+    }
+}
+```
+
+---
 
 
-## Libraries - in libs folder
-You can store common code in the libs folder. File name - it is library name.
+---
 
-For example code in myLib.js:
+## 🚀 Why Hazex Games Stands Out
 
-    function hello(){ Bot.sendMessage("Hello from lib!") }
-    function goodbye(name){ Bot.sendMessage("Goodbye, " + name) }
+- Unique blend of **casual & classic games**.
+- Built with **Telegram Mini Apps’ latest features**.
+- **Auto-adaptive UI** for both portrait and landscape.
+- Built for **performance and user engagement inside Telegram.**
 
-    publish({
-      sayHello: hello,
-      sayGoodbyeTo: goodbye
-    })
+---
 
-then you can run in any bot's command:
+## 🏆 Contest Focus
 
-    Libs.myLib.hello()
-    Libs.myLib.sayGoodbyeTo("Alice")
+This bot is designed for a **Telegram WebApp contest**, focusing on:
 
-See [more](https://help.bots.business/git/library)
+- ✅ Smooth UX inside Telegram
+- ✅ Leveraging Mini App Events (fullscreen, orientation, lifecycle)
+- ✅ Unique multi-game experience
+- ✅ Clean and readable code
 
-## Other bots example
-See other bots examples in the [github](https://github.com/bots-business?utf8=✓&tab=repositories&q=&type=public&language=javascript) or in the [Bot Store](https://bots.business/)
+---
 
+## 📸 Screenshots
 
-## Other help
-[Help.bots.business](https://help.bots.business)
+### Main Game Menu
+_(Attach screenshots of your main menu)_
 
-## API
-See [API](https://api.bots.business/docs#/docs/summary)
+### Game in Fullscreen
+_(Attach screenshot showing fullscreen gameplay)_
 
+---
 
-![](https://bots.business/images/web-logo.png)
+## 💬 Contact
+
+Have questions or want to collaborate? Reach out via Telegram:
+
+👉 [Contact Developer](https://t.me/mrhazex)
+
+---
+
+## ⭐ Credits
+
+Developed by: **Hazex**  
+Bot Link: [@HazexBB_Bot](https://t.me/HazexBB_Bot)
+
+---
+
+## 🏁 Final Note
+
+This project isn’t just a game launcher — it’s designed to show the **full potential of Telegram WebApps**, including:
+
+- Dynamic content loading
+- Fullscreen gaming experience
+- Real-time device interaction
+- Seamless integration with Telegram’s evolving platform
