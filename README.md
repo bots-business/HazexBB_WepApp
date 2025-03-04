@@ -1,7 +1,7 @@
 
 # 🎮 Hazex Games
 
-Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast, fun, and addictive games directly inside Telegram**. From arcade classics to modern skill challenges, Hazex Games offers a smooth, mobile-friendly experience.
+Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast, fun, and addictive games directly inside Telegram**. From arcade classics to modern skill challenges.
 
 ---
 
@@ -19,8 +19,8 @@ Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast,
 
 ## 🎮 Games Available
 
-| Game Name          | Description                              |
-|--------------------|----------------------------------|
+| Game Name    | Description |
+|----------------|---------------------------------|
 | Subway Surfers | Run, dodge, and collect coins. |
 | Temple Run - Holi | Run, escape, and dodge all obstacles! |
 | Stack Bounce | Smash stacks with bouncing ball fun! |
