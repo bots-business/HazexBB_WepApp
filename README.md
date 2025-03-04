@@ -1,5 +1,5 @@
 
-# Hazex Games 🎮
+# 🎮 Hazex Games
 
 Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast, fun, and addictive games directly inside Telegram**. From arcade classics to modern skill challenges, Hazex Games offers a smooth, mobile-friendly experience.
 
@@ -11,6 +11,8 @@ Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast,
 - 📲 **Full WebApp Integration**
 - 📐 **Auto Fullscreen with Orientation Support**
 - ⚡ **Seamless Play with No Installs**
+- 🎮 Users Can Request New Games Directly
+- 🛎️ Admin Receives Game Requests in Bot with User Info
 - 🎨 **Responsive Design for Mobile & Desktop**
 
 ---
@@ -20,13 +22,13 @@ Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast,
 | Game Name           | Description                              |
 |--------------------|----------------------------------|
 | Subway Surfers     | Run, dodge, and collect coins. |
-| Happy Wheels       | Hilarious physics-based obstacle game. |
-| Geometry Dash      | Jump and survive the beat. |
-| Monster Truck      | Race monster trucks to the finish. |
-| Temple Run         | Escape the temple, avoid obstacles. |
-| Stupid Zombie      | Shoot and solve physics puzzles. |
-| Stack Bounce       | Smash through rotating stacks. |
-| Tunnel Rush        | Dodge obstacles in high-speed tunnel. |
+| Temple Run - Holi  | Run, escape, and dodge all obstacles! |
+| Stack Bounce       | Smash stacks with bouncing ball fun! |
+| Pac Man       | Eat dots, avoid ghosts, classic maze! |
+| Happy Wheels       | Crazy physics racing with hilarious crashes! |
+| Geometry Dash      | Jump, dodge, and survive the beat! |
+| Tunnel Rush        | Dodge obstacles in colorful fast tunnel! |
+| Monster Truck      | Race monster trucks to the finish! |
 
 ---
 
@@ -38,6 +40,9 @@ Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast,
 4. **Fullscreen support for immersive gameplay.**
 5. Orientation detection hides the navbar in landscape mode for better screen space.
 6. Users can exit fullscreen or return to the main menu at any time.
+7. If a user wants a new game added, they can fill a "Request Game" form.
+8. The requested game name and the user's Telegram name are instantly sent to the bot admin via a direct bot message.
+9. Admin can review and decide whether to add the new game to the list.
 
 ---
 
@@ -130,16 +135,21 @@ This bot is designed for a **Telegram WebApp contest**, focusing on:
 - ✅ Leveraging Mini App Events (fullscreen, orientation, lifecycle)
 - ✅ Unique multi-game experience
 - ✅ Clean and readable code
+- ✅ Users can request new games via a form inside the WebApp.
+- ✅ The admin receives the game request directly as a message in your bot including the user's Telegram name, id and the requested game.
 
 ---
 
 ## 📸 Screenshots
 
 ### Main Game Menu
-_(Attach screenshots of your main menu)_
+![Main Menu](https://i.ibb.co/mC9CGPZf/image.png)
 
-### Game in Fullscreen
-_(Attach screenshot showing fullscreen gameplay)_
+### Gameplay
+![Gameplay](https://i.ibb.co/8n4v0Nth/image.png)
+
+### Request Form
+![Request Form](https://i.ibb.co/bM9kTsSy/image.png)
 
 ---
 
