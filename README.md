@@ -188,8 +188,12 @@ This bot is designed for a **Telegram WebApp contest**, focusing on:
 ### Main Game Menu
 ![Main Menu](https://i.ibb.co/nq4YpNfH/image-2.png)
 
+---
+
 ### Gameplay
 ![Gameplay](https://i.ibb.co/R4NF1vrs/image-3.png)
+
+---
 
 ### Request Form
 ![Request Form](https://i.ibb.co/MkDJsMkS/image-4.png)
