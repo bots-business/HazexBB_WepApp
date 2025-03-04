@@ -113,6 +113,39 @@ function toggleFullScreen() {
 }
 ```
 
+**Request Form**
+
+```javascript
+const payload = {
+    user_id: tg.initDataUnsafe.user.id,
+    user_name: tg.initDataUnsafe.user.first_name,
+    game_name: gameName
+};
+
+fetch("<% options.saveUrl %>", {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+})
+.then(response => response.json())
+.then(result => {
+    if (result.success) {
+        inputField.value = "";
+        tg.showAlert('Game Request Sent!');
+        tg.HapticFeedback.notificationOccurred('success');
+    } else {
+        errorMessage.textContent = "Failed To Submit Request!";
+        tg.HapticFeedback.notificationOccurred('error');
+    }
+})
+.catch(error => {
+    errorMessage.textContent = 'Failed To Submit Request!';
+    tg.HapticFeedback.notificationOccurred('error');
+});
+```
+
 ---
 
 
