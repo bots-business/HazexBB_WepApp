@@ -186,13 +186,13 @@ This bot is designed for a **Telegram WebApp contest**, focusing on:
 ## 📸 Screenshots
 
 ### Main Game Menu
-![Main Menu](https://i.ibb.co/mC9CGPZf/image.png)
+![Main Menu](https://i.ibb.co/nq4YpNfH/image-2.png)
 
 ### Gameplay
-![Gameplay](https://i.ibb.co/8n4v0Nth/image.png)
+![Gameplay](https://i.ibb.co/R4NF1vrs/image-3.png)
 
 ### Request Form
-![Request Form](https://i.ibb.co/bM9kTsSy/image.png)
+![Request Form](https://i.ibb.co/MkDJsMkS/image-4.png)
 
 ---
 
