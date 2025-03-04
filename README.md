@@ -1,5 +1,5 @@
 
-# 🎮 Hazex Games
+# [🎮 Hazex Games](https://t.me/hazexbb_bot)
 
 Hazex Games is a **Telegram WebApp-powered gaming platform**, delivering **fast, fun, and addictive games directly inside Telegram**. From arcade classics to modern skill challenges.
 
