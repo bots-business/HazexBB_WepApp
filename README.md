@@ -156,6 +156,24 @@ fetch("<% options.saveUrl %>", {
 });
 ```
 
+**Request Command**
+
+```javascript
+//message to admin on new request
+
+var txt = `<b>🚀 New Game Request Received
+
+▫️ User's Name: ${options.user_name}
+▫️ User's Telegram ID: <code>${options.user_id}</code>
+
+🔸 Game Name: ${options.game_name}</b>`
+
+#Replace AdminID with your actual telegram id in /receivedRequest command
+var adminId = "#AdminID";
+
+Api.sendMessage({ chat_id: adminId, text: txt, parse_mode: "HTML" })
+```
+
 ---
 
 
